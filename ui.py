@@ -80,7 +80,7 @@ chart = (
     alt.Chart(df)
     .mark_bar(color="#378ADD", cornerRadiusTopLeft=2, cornerRadiusTopRight=2)
     .encode(
-        x=alt.X("rank:Q", title="名次"),
+        x=alt.X("rank:Q", title="名次", scale=alt.Scale(domainMin=1)),
         y=alt.Y("prize:Q", title="獎金（元）"),
         tooltip=[
             alt.Tooltip("rank:Q", title="名次"),
